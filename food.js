@@ -9,7 +9,7 @@ function makeDom(xhrData) {
 		dogString += `<div class="col-sm-6 col-md-4">`;
 		dogString += `<div class="thumbnail">`;
 		dogString += `<h3>${currentFood.name}</h3>`;
-		dogString += `</div></div></div>`;
+		dogString += `</div></div>`;
   console.log("currentFood", currentFood);
 	}
 
