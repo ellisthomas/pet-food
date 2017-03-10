@@ -1,79 +1,57 @@
-# pet-food
+# Pet-Food
 
-Instructions
+##Instructions
+>Build a product page that displays all brands of dog food, the different types, with the price and size for each container volume.
 
-You are working as a junior developer team for Acme, Inc. This company sells dog food. Each brand of dog food is represented by an object in an array you get back from the (fictional database) in JSON format.
+>Create two separate JSON files to hold the data for dogs and cats using xhr data to get content back to the DOM.
 
-{
-  "dog_brands": [
-    {
-      "name": "Chuck wagon",
-      "types": [
-        {
-          "type": "all_natural",
-          "volumes": [
-            {
-              "name": "32oz",
-              "price": 9.99
-            },
-            {
-              "name": "64oz",
-              "price": 17.99
-            }
-          ]
-        },
-        {
-          "type": "standard",
-          "volumes": [
-            {
-              "name": "58oz",
-              "price": 12.99
-            },
-            {
-              "name": "72oz",
-              "price": 21.99
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Purina",
-      "types": [
-        {
-          "type": "puppy",
-          "volumes": [
-            {
-              "name": "16oz",
-              "price": 8.99
-            },
-            {
-              "name": "24oz",
-              "price": 14.99
-            }
-          ]
-        },
-        {
-          "type": "standard",
-          "volumes": [
-            {
-              "name": "58oz",
-              "price": 19.99
-            },
-            {
-              "name": "72oz",
-              "price": 24.99
-            }
-          ]
-        }
-      ]
+###Screenshot
+![pet-food](https://raw.githubusercontent.com/ellisthomas/pet-food/pets/screenshot/pet-food.jpg)
+
+###Code sample
+```
+function makeDom(xhrData) {
+  var dogString = "" 
+  var currentFood; 
+  
+  for (var i = 0; i < xhrData.dog_brands.length; i++) {
+    currentFood = xhrData.dog_brands[i];
+    
+    dogString += `<div class="col-lg-3 col-lg-3 col-lg-3 col-lg-3">`;
+    dogString += `<div class="thumbnail">`;
+    dogString += `<h2 class="doggy">${currentFood.name}</h2>`;
+
+    for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
+    
+      dogString += `<h3 class="myType">${currentFood.types[j].type}</h3>`;
+      
+      for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
+
+        dogString += `<h3 class="toats">${currentFood.types[j].volumes[k].name}</h3>`;
+        dogString += `<h3 class="money">${currentFood.types[j].volumes[k].price}</h3>`;
+      }
     }
-  ]
+        dogString += `</div></div></div>`;
+  }
+
+    dogContainer.innerHTML = dogString;
 }
-Your first task is to build a product page that displays all brands of dog food, the different types, with the price and size for each container volume.
+```
 
-Once you have all of that information listed, you need to create a second JSON file to represent the new product line for Acme, Inc. They now want to sell cat food. Your product owner gives you a spreadsheet with all the new data in it. It is your job to get this data represented correctly in JSON format and then update your page to now show cat food, along with dog food.
+### How to run (Node must be installed on your machine):
+```
+git clone git@github.com:ellisthomas/pet-food.git
+npm install http-server -g
+http-server -p 8080
+```
 
-Brand	Breeds	Types / Prices
-Purrina	Siamese, Bengal, Showshoe, Munchkin	Kitten, 20oz, 19.99 : Kitten, 32oz, 26.99 : Kitten, 64oz, 34.99 : Elite, 20oz, 24.99 : Elite, 40oz, 47.99
-Meow Meal	Manx, Egyptian Mau, Himalayan, Rag Doll	Kitten, 24oz, 19.99 : Kitten, 48oz, 34.99 : Adult, 28oz, 22.99 : Adult, 56oz, 40.99
+This will show in your browser at:
+`http://localhost:8080`
+
+### Languages Used
+- HTML
+- CSS
+- JavaScript
+
+### Contributors 
+[Ellis Thomas](https://github.com/ellisthomas)

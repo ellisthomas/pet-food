@@ -3,20 +3,17 @@ var dogContainer = document.getElementById("dogContainer");
 function makeDom(xhrData) {
 	var dogString = "" 
 	var currentFood; 
-	// console.log("currentFood", xhrData.dog_brands);
 	
 	for (var i = 0; i < xhrData.dog_brands.length; i++) {
 		currentFood = xhrData.dog_brands[i];
-		// dogString += `<div class="row">`;
+		
 		dogString += `<div class="col-lg-3 col-lg-3 col-lg-3 col-lg-3">`;
 		dogString += `<div class="thumbnail">`;
 		dogString += `<h2 class="doggy">${currentFood.name}</h2>`;
 
-
 		for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
 	  
 			dogString += `<h3 class="myType">${currentFood.types[j].type}</h3>`;
-			// console.log("my type", xhrData.dog_brands[i].types);
 			
 			for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
 
@@ -25,7 +22,6 @@ function makeDom(xhrData) {
 			}
 		}
 				dogString += `</div></div></div>`;
-
 	}
 
 		dogContainer.innerHTML = dogString;
