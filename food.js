@@ -43,3 +43,15 @@ myRequest.addEventListener("load", executeThisCodeAfterFileLoaded);
 myRequest.addEventListener("error", executeThisCodeAfterFileFails);
 myRequest.open("GET", "dogFood.json"); //change dino json to current json file working on
 myRequest.send();
+
+
+var myRequestCat = new XMLHttpRequest();
+myRequestCat.addEventListener("load", executeThisCodeAfterFileLoaded);
+myRequestCat.addEventListener("error", executeThisCodeAfterFileFails);
+myRequestCat.open("GET", "catFood.json"); //change dino json to current json file working on
+myRequestCat.send();
+
+
+
+
+
