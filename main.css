@@ -1,0 +1,53 @@
+
+h1 {
+	text-align: center;
+}
+
+.kitty {
+	display: flex;
+	justify-content: center;
+	background-color: pink;
+}
+
+.doggy {
+	display: flex;
+	justify-content: center;
+	background-color: lightblue;
+}
+
+.myType {
+	display: flex;
+	justify-content: center;
+}
+
+.toats {
+	display: inline-flex;
+	margin-right: 50px;
+	margin-left: 50px;
+
+}
+
+.money {
+	display: inline-flex;
+	justify-content: right;
+	margin-right: 15px;
+}
+
+
+.dog {
+	position:fixed;
+    bottom: 0px;
+    right: 70%;
+    z-index: 1;
+   	width: 300px;
+   	height: 300px;
+}
+
+.dogFood {
+	position:fixed;
+    bottom: 0px;
+    left: 70%;
+    z-index: 1;
+   	width: 400px;
+   	height: 400px;
+}
