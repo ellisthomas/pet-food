@@ -5,10 +5,10 @@
 
 >Create two separate JSON files to hold the data for dogs and cats using xhr data to get content back to the DOM.
 
-###Screenshot
+### Screenshot
 ![pet-food](https://raw.githubusercontent.com/ellisthomas/pet-food/pets/screenshot/pet-food.jpg)
 
-###Code sample
+### Code sample
 ```
 function makeDom(xhrData) {
   var dogString = "" 
