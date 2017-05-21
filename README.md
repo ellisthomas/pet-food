@@ -1,6 +1,6 @@
 # Pet-Food
 
-##Instructions
+## Instructions
 >Build a product page that displays all brands of dog food, the different types, with the price and size for each container volume.
 
 >Create two separate JSON files to hold the data for dogs and cats using xhr data to get content back to the DOM.
